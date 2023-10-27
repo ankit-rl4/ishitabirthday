@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    background-image: url('static/image/page2_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out 0.5s forwards, scaleIn 1s ease-in-out 1.5s forwards;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out 0.5s forwards;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0.8); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <title>You</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <img src="static/image/page2_left.jpg" alt="Image 1" class="img-fluid">
+            </div>
+            <div class="col-6">
+                <div class="card text-center" style="width :100%;">
+                    <div class="card-body">
+                        <h1 class="card-title">Happy Birthday!</h1>
+                        <p class="card-text">So, I thought of making a sketch or a card for your birthday, but I'm not very good at art or drawing. However, I did what I'm good at, and that's tech, so here's what I have for you - the best of me, the best of what I can do!</p>
+                    </div>
+                </div>
+                <br>
+                <h2 style="text-align:center; display:none;" id="fur">Let's go further! Click the button.</h2>
+                <br>
+                <div class="text-center" >
+                <button class="btn btn-outline-primary" id="next" style="width:50%; display:none;">Let's Go!!</button>
+            </div>
+            </div>
+            <div class="col-3">
+                <img src="static/image/page2_right.jpg" alt="Image 2" class="img-fluid">
+            </div>
+        </div>
+        <div class="row mt-3">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    const nextButton = document.getElementById('next');
+
+
+nextButton.addEventListener('click', () => {
+    window.location.href = '/card';
+});
+
+ $(document).ready(function() {
+      // Function to make the button appear with a fade-in effect
+      function makeButtonAppear() {
+        var buttonContainer = $('#fur');
+        var hiddenButton = $('#next');
+        buttonContainer.fadeIn(); // Fade in the container
+        hiddenButton.fadeIn(); // Fade in the button
+      }
+
+      // Set a 5-second delay using jQuery
+      setTimeout(makeButtonAppear, 5000);
+    });
+</script>
+</body>
+</html>

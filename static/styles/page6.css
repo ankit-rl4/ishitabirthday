@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-images {
+    width: 200%; /* Twice the width of the viewport to accommodate two images */
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scroll 20s linear infinite; /* Adjust the duration as needed */
+    opacity: 0.7;
+}
+
+.background-image {
+    background-size: cover;
+    background-attachment: fixed;
+    width: 50%; /* Half of the container's width to fit two images */
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.background-image1 {
+    background-image: url('collage1.jpg'); /* Replace with your first image path */
+    left: 0;
+}
+
+.background-image2 {
+    background-image: url('collage2.jpg'); /* Replace with your second image path */
+
+    left: 50%; /* Start the second image halfway across the container */
+}
+
+.content {
+   z-index:5;
+   position: relative;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Shift the images to show the second one */
+    }
+}
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      padding: 20px;
+      background-color: rgba(128, 128, 128, 0.5);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      text-align: center;
+      margin-top: 100px;
+
+    }
+
+

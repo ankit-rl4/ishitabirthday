@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>rock</title>
+
+  <link rel="stylesheet" href="static/styles/card.css">
+	  <style>
+    /* CSS for the button */
+    #nextButton {
+      background-color: transparent;
+      color: #333; /* Text color */
+      border: 2px solid #333; /* Border color */
+      padding: 10px 20px; /* Adjust the padding to make it larger */
+      font-size: 20px; /* Adjust the font size to make it larger */
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #nextButton:hover {
+      background-color: #333; /* Background color on hover */
+      color: #fff; /* Text color on hover */
+    }
+  </style>
+</head>
+
+<body>
+
+<H2 style="text-align:center;">You said the best birthday gift you got on your last birthday was a card.</H2>
+<h1 style="text-align:center;">SO HERE IS A CARD FOR YOU!!</h1>
+<h3 style="text-align:center;">Open it.</h3>
+
+ 	<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+		</div>
+		<div class="details">
+			<h4 class="color1">You're not a Fossil! (YET)</h2>
+			<h4 class="color2 margin">(HAPPY BIRTHDAY)</h3>
+			<p>Dear friend,</p>
+			<p>Let's see.. .</p>
+			<p>So for the past months..</p>
+			<p>We had a lots of ups and downs</p>
+			<p>but guess what?</p>
+			<p>Despite every situation, we always</p>
+			<p>found our way back to each other</p>
+			<p>Now shinning brighter together than ever! :)</p>
+			<p class="text-right">Happy Birthday, Ishita!</p>
+			<p class="text-right">♥Ankit</p>
+		</div>
+
+	</div>
+     <footer style="text-align: right; padding: 20px;">
+        <button id="nextButton" class="btn btn-outline-primary" style="display:none;">Not the End Yet!</button>
+	 </footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+const nextButton = document.getElementById('nextButton');
+
+
+nextButton.addEventListener('click', () => {
+    window.location.href = '/page4';
+});
+ $(document).ready(function() {
+      // Function to make the button appear with a fade-in effect
+      function makeButtonAppear() {
+
+        var hiddenButton = $('#nextButton');
+
+        hiddenButton.fadeIn(); // Fade in the button
+      }
+
+      // Set a 5-second delay using jQuery
+      setTimeout(makeButtonAppear, 5000);
+    });
+</script>
+</html>
